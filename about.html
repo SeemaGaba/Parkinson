@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parkinson's AI Assistant | About</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Main Stylesheets -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Additional styles for the about page to maintain consistency */
+      .about-container {
+        max-width: var(--layout-max-width);
+        margin: 0 auto;
+        padding: 0 var(--space-md);
+        padding-bottom: var(--space-xl);
+      }
+
+      .about-card {
+        background-color: var(--color-surface);
+        border: 1px solid var(--color-border-subtle);
+        border-radius: var(--border-radius-lg);
+        padding: var(--space-xl);
+        margin-top: var(--space-lg);
+        animation: slide-down-fade-in 0.6s var(--transition-smooth) both;
+      }
+
+      .about-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: var(--space-xl);
+      }
+
+      .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: var(--border-radius-full);
+        background-color: var(--color-code-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: var(--space-md);
+        overflow: hidden; /* Ensures image stays within bounds */
+        border: 3px solid var(--color-primary); /* Add a border */
+        box-shadow: 0 0 15px rgba(var(--color-primary-rgb), 0.3); /* Add a subtle shadow */
+      }
+
+      .profile-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+      }
+
+      .profile-photo i {
+        font-size: 4rem;
+        color: var(--color-text-secondary);
+      }
+
+      .about-header h2 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--color-text-primary);
+        margin-bottom: var(--space-sm);
+      }
+
+      .about-header p {
+        font-size: 1rem;
+        color: var(--color-text-secondary);
+        line-height: 1.6;
+        max-width: 600px;
+      }
+
+      .about-section {
+        margin-bottom: var(--space-xl);
+      }
+
+      .about-section h3 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary);
+        margin-bottom: var(--space-md);
+        border-bottom: 2px solid var(--color-border-subtle);
+        padding-bottom: var(--space-sm);
+      }
+
+      .about-section p,
+      .about-section ul {
+        font-size: 1rem;
+        color: var(--color-text-primary);
+        line-height: 1.7;
+        margin-bottom: var(--space-md);
+      }
+
+      .about-section ul {
+        list-style: disc;
+        padding-left: var(--space-lg);
+      }
+
+      .about-section li {
+        margin-bottom: var(--space-xs);
+      }
+
+      .about-section strong {
+        color: var(--color-text-primary);
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .about-card {
+          padding: var(--space-lg);
+        }
+
+        .about-header h2 {
+          font-size: 1.8rem;
+        }
+
+        .about-section h3 {
+          font-size: 1.3rem;
+        }
+
+        .about-section p,
+        .about-section ul {
+          font-size: 0.95rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- MAIN NAVIGATION -->
+    <nav class="main-nav">
+      <ul>
+        <li class="nav-bot-title">
+          <span class="nav-bot-title">Parkinson's AI Assistant</span>
+        </li>
+        <li class="nav-links"><a href="index.html">Chatbot</a></li>
+        <li class="nav-links">
+          <a href="prediction.html">Get Prediction</a>
+        </li>
+        <li class="nav-links">
+          <a href="report_dashboard.html">Previous Report</a>
+        </li>
+        <li class="nav-links">
+          <a href="about.html" class="active">About</a>
+        </li>
+        <li class="nav-links">
+          <button
+            id="theme-toggle"
+            class="theme-toggle-btn"
+            aria-label="Toggle theme"
+          >
+            <i class="ph-bold ph-sun"></i>
+            <i class="ph-bold ph-moon"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <div class="about-container">
+        <div class="page-title-container">
+          <h1>About This Project</h1>
+          <p>
+            Learn more about the research and the brilliant mind behind this AI
+            Assistant.
+          </p>
+        </div>
+
+        <div class="about-card">
+          <div class="about-header">
+            <div class="profile-photo">
+              <!-- Placeholder for photo. You can replace this with an <img> tag:
+                   <img src="path/to/your/photo.jpg" alt="Seema Gaba's Photo"> -->
+              <i class="ph-bold ph-user-circle"></i>
+            </div>
+            <h2>Seema Gaba</h2>
+            <p>
+              PhD Research Scholar & Assistant Professor at Lovely Professional
+              University, Phagwara, Punjab, India.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3>Biography</h3>
+            <p>
+              Seema Gaba is a PhD Research Scholar and Assistant Professor at
+              Lovely Professional University, Phagwara, Punjab, India. With over
+              4 years of professional experience in academia, she holds an
+              M.Tech in CSE from Lovely Professional University and a B.Tech
+              from R.I.E.T Phagwara, Punjab.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3>Research Focus</h3>
+            <p>
+              Seema Gaba's doctoral research is dedicated to developing
+              <strong
+                >Predictive Models for Parkinson’s Disease Detection</strong
+              >
+              using advanced Machine Learning Techniques. Her work integrates
+              various data sources, including neuroimaging, clinical
+              assessments, and behavioral biomarkers.
+            </p>
+            <p>
+              Her current research involves the development of hybrid models,
+              leveraging the power of algorithms such as
+              <strong>XGBoost</strong>, <strong>Gradient Boosting</strong>, and
+              <strong>Support Vector Machine (SVM)</strong> to enhance the
+              accuracy and reliability of early Parkinson's disease detection.
+            </p>
+          </div>
+
+          <div class="about-section">
+            <h3>Conference Presentations</h3>
+            <ul>
+              <li>
+                <strong>Gaba, Seema & Arora, Harpreet. (2024).</strong> Machine
+                Learning Techniques for Parkinson's Disease Prediction and
+                Progression: A Comprehensive Review. Presented at:
+                <em>IC3SE62002.2024.10593626.</em>
+                (Pages: 430-436).
+              </li>
+            </ul>
+          </div>
+
+          <div class="about-section">
+            <h3>Acknowledgements</h3>
+            <p>
+              This project would not have been possible without the gracious
+              support of Lovely Professional University. Deepest gratitude is
+              expressed to <strong>Dr. Harpreet Kaur</strong> for their
+              invaluable guidance, motivation, and continuous support throughout
+              this research.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const themeToggleButton = document.getElementById("theme-toggle");
+        const body = document.body;
+        const mainNav = document.querySelector(".main-nav");
+        const mainContent = document.querySelector(".main-content");
+
+        const handleThemeToggle = () => {
+          body.classList.toggle("light-mode");
+          const currentTheme = body.classList.contains("light-mode")
+            ? "light"
+            : "dark";
+          localStorage.setItem("theme", currentTheme);
+          themeToggleButton.setAttribute(
+            "aria-label",
+            `Switch to ${currentTheme === "light" ? "dark" : "light"} mode`
+          );
+        };
+
+        const handleNavScroll = () => {
+          if (!mainContent || !mainNav) return;
+          mainNav.classList.toggle("scrolled", mainContent.scrollTop > 10);
+        };
+
+        const initializeTheme = () => {
+          const savedTheme = localStorage.getItem("theme");
+          if (savedTheme === "light") {
+            body.classList.add("light-mode");
+          }
+          const currentTheme = body.classList.contains("light-mode")
+            ? "light"
+            : "dark";
+          themeToggleButton.setAttribute(
+            "aria-label",
+            `Switch to ${currentTheme === "light" ? "dark" : "light"} mode`
+          );
+        };
+
+        initializeTheme();
+        themeToggleButton.addEventListener("click", handleThemeToggle);
+        if (mainContent) {
+          mainContent.addEventListener("scroll", handleNavScroll);
+        }
+      });
+    </script>
+  </body>
+</html>
