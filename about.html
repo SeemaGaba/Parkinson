@@ -36,7 +36,7 @@
       .about-header {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; /* Keeps the profile photo and text centered */
         text-align: center;
         margin-bottom: var(--space-xl);
       }
@@ -58,9 +58,11 @@
       .profile-photo img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Ensures the image covers the area without distortion */
+        object-fit: cover; /* Ensures the image covers the area without distortion, cropping if necessary */
+        display: block; /* Removes extra space below the image */
       }
 
+      /* The icon styling is no longer directly used if an image is present, but kept for fallback */
       .profile-photo i {
         font-size: 4rem;
         color: var(--color-text-secondary);
@@ -179,9 +181,8 @@
         <div class="about-card">
           <div class="about-header">
             <div class="profile-photo">
-              <!-- Placeholder for photo. You can replace this with an <img> tag:
-                   <img src="path/to/your/photo.jpg" alt="Seema Gaba's Photo"> -->
-              <i class="ph-bold ph-user-circle"></i>
+              <!-- Replaced placeholder icon with the actual image -->
+              <img src="image.jpg" alt="Seema Gaba's Photo" />
             </div>
             <h2>Seema Gaba</h2>
             <p>
